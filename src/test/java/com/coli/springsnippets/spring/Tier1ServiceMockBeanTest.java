@@ -22,6 +22,8 @@ public class Tier1ServiceMockBeanTest {
     /**
      * The injection doesn't work if the mocked object is not mandatory, it's the case if the container service
      * (here: in Tier2Service) has an empty constructor.
+     * Also, we must ensure that this dependency is injected at context instantiation, for ex with a constructor or
+     * with a setter injection.
      */
     @MockBean
     private TenantRepository tenantRepositoryMock;

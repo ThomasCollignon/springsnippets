@@ -14,7 +14,7 @@ import static org.mockito.MockitoAnnotations.openMocks;
 
 class Tier1ServiceMockServiceTest {
 
-    @InjectMocks
+    @InjectMocks // Replaces tier1Service = new Tier1Service(null, tier2ServiceMock); in the setUp
     private Tier1Service tier1Service;
 
     @Mock

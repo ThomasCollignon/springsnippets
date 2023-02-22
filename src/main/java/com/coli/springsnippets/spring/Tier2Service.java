@@ -9,7 +9,7 @@ public class Tier2Service {
     // Can't be final if we want to spy Tier2Service, see Tier1ServiceSpyServiceTest
     private TenantRepository tenantRepository;
 
-    @Autowired
+    @Autowired // Setter injection, needed for @MockBean, see Tier1ServiceMockBeanTest
     public void setTenantRepository(TenantRepository tenantRepository) {
         this.tenantRepository = tenantRepository;
     }

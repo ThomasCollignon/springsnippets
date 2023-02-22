@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * {@literal @}Autowired on properties (= field injection) can replace the constructor (constructor injection) or the
+ * use of {@literal @}RequiredArgsConstructor, without the 'final' modifier, which would break immutability.
+ */
 @RestController
 @RequiredArgsConstructor
 public class DemoController {
