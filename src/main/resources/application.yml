@@ -1,0 +1,22 @@
+# Same as application.properties, in YAML format, just a matter of preference
+
+spring:
+  datasource:
+    username: usr_multip
+    url: jdbc:postgresql://10.30.6.24:5432/multipack_mtr
+    password: Y289yeCHxdeLBk4b
+
+  # See https://www.baeldung.com/spring-boot-yaml-vs-properties
+  jpa:
+    properties:
+      hibernate:
+        format_sql: 'true'
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
